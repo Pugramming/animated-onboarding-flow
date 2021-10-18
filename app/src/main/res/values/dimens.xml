@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DIPS -->
+    <dimen name="spacer_sm">4dp</dimen>
+    <dimen name="eight_dips">8dp</dimen>
+    <dimen name="twelve_dips">12dp</dimen>
+    <dimen name="sixteen_dips">16dp</dimen>
+    <dimen name="twenty_four_dips">24dp</dimen>
+    <dimen name="thirty_two_dips">32dp</dimen>
+    <dimen name="one_hundred_dips">100dp</dimen>
+    <dimen name="forty_two_dips">42dp</dimen>
+    <dimen name="fifty_two_dips">52dp</dimen>
+    <dimen name="splash_logo_height">190dp</dimen>
+    <dimen name="loading_lottie_width">200dp</dimen>
+    <dimen name="error_lottie_height">300dp</dimen>
+    <dimen name="session_card_width">150dp</dimen>
+    <dimen name="session_card_height">100dp</dimen>
+    <dimen name="highlight_card_width">220dp</dimen>
+    <dimen name="highlight_card_height">330dp</dimen>
+
+    <!-- SCALE PIXELS -->
+    <dimen name="thirty_two_scale_pixels">32sp</dimen>
+    <dimen name="thirty_six_scale_pixels">36sp</dimen>
+    <dimen name="twelve_scale_pixels">12sp</dimen>
+    <dimen name="fourteen_scale_pixels">14sp</dimen>
+    <dimen name="sixteen_scale_pixels">16sp</dimen>
+    <dimen name="eighteen_scale_pixels">18sp</dimen>
+
+    <!-- Text size dimens -->
+    <dimen name="text_size_h1">36sp</dimen>
+    <dimen name="text_size_h2">32sp</dimen>
+    <dimen name="text_size_h3">20sp</dimen>
+    <dimen name="text_size_h4">16sp</dimen>
+    <dimen name="text_size_h5">12sp</dimen>
+    <dimen name="text_size_p1">16sp</dimen>
+    <dimen name="text_size_p2">14sp</dimen>
+    <dimen name="text_size_p3">14sp</dimen>
+    <dimen name="text_size_p4">12sp</dimen>
+    <dimen name="text_size_b1">14sp</dimen>
+    <dimen name="text_size_b2">14sp</dimen>
+    <dimen name="text_size_b3">12sp</dimen>
+    <dimen name="text_size_f1">16sp</dimen>
+    <dimen name="text_size_f2">14sp</dimen>
+    <dimen name="text_size_f3">14sp</dimen>
+    <dimen name="text_size_f4">12sp</dimen>
+    <dimen name="text_size_s1">10sp</dimen>
+    <dimen name="text_size_s2">10sp</dimen>
+    <dimen name="text_size_s3">9sp</dimen>
+
+    <!-- Space size dimens -->
+    <dimen name="space_size_1dp">1dp</dimen>
+    <dimen name="space_size_2dp">2dp</dimen>
+    <dimen name="space_size_4dp">4dp</dimen>
+    <dimen name="space_size_5dp">5dp</dimen>
+    <dimen name="space_size_8dp">8dp</dimen>
+    <dimen name="space_size_12dp">12dp</dimen>
+    <dimen name="space_size_16dp">16dp</dimen>
+    <dimen name="space_size_20dp">20dp</dimen>
+    <dimen name="space_size_24dp">24dp</dimen>
+    <dimen name="space_size_32dp">32dp</dimen>
+    <dimen name="space_size_40dp">40dp</dimen>
+    <dimen name="space_size_48dp">48dp</dimen>
+    <dimen name="space_size_64dp">64dp</dimen>
+    <dimen name="space_size_72dp">72dp</dimen>
+    <dimen name="space_size_96dp">96dp</dimen>
+    <dimen name="space_size_120dp">120dp</dimen>
+</resources>

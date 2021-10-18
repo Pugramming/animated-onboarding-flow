@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Onboarding</string>
+    <string name="onboarding_hint">Things you can do</string>
+    <string name="first_page_title">Browse recipes</string>
+    <string name="first_page_subtitle">Select from a range of recipes. Explore by\ningredients, occasions or combinations</string>
+    <string name="second_page_title">Discover</string>
+    <string name="second_page_subtitle">See our chefs recommendations. We\'ll find\nrecipes similar to your search as well</string>
+    <string name="third_page_title">Favourites</string>
+    <string name="third_page_subtitle">Create your own recipes book, you can\nalso share it with your friends</string>
+    <string name="lets_start">Let\'s start</string>
+</resources>

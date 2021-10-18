@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="3000"
+        motion:motionInterpolator="easeInOut">
+
+        <OnClick
+            motion:targetId="@+id/letsStartButton"
+            motion:clickAction="transitionToEnd"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="80"
+                motion:framePosition="40"
+                motion:motionTarget="@id/firstPlate" />
+            <KeyAttribute
+                android:rotation="-80"
+                motion:framePosition="40"
+                motion:motionTarget="@id/secondPlate" />
+            <KeyAttribute
+                android:rotation="80"
+                motion:framePosition="60"
+                motion:motionTarget="@id/thirdPlate" />
+
+            <KeyAttribute
+                android:rotation="-66"
+                motion:sizePercent="0.7"
+                motion:framePosition="75"
+                motion:motionTarget="@id/pizzaPlate" />
+            <KeyAttribute
+                motion:framePosition="58"
+                android:alpha="1"
+                motion:motionTarget="@id/pizzaPlate" />
+            <KeyAttribute
+                motion:framePosition="59"
+                android:alpha="0"
+                motion:motionTarget="@id/pizzaPlate" />
+            <KeyPosition
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.8"
+                motion:percentX="-0.98"
+                motion:framePosition="45"
+                motion:motionTarget="@id/pizzaPlate"/>
+            <KeyPosition
+                motion:keyPositionType="parentRelative"
+                motion:percentY="-0.45"
+                motion:framePosition="99"
+                motion:motionTarget="@id/pizzaPlate"/>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="0"
+                motion:motionTarget="@id/pizzaSlice" />
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="57"
+                motion:motionTarget="@id/pizzaSlice" />
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="58"
+                motion:motionTarget="@id/pizzaSlice" />
+
+            <KeyAttribute
+                android:rotation="-50"
+                motion:framePosition="90"
+                motion:motionTarget="@id/coffee" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="57"
+                motion:motionTarget="@id/pizzaSlicedPlate" />
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="58"
+                motion:motionTarget="@id/pizzaSlicedPlate" />
+            <KeyAttribute
+                motion:framePosition="75"
+                motion:motionTarget="@id/pizzaSlicedPlate" />
+            <KeyPosition
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.8"
+                motion:percentX="-0.98"
+                motion:framePosition="45"
+                motion:motionTarget="@id/pizzaSlicedPlate"/>
+            <KeyPosition
+                motion:keyPositionType="parentRelative"
+                motion:percentY="-0.45"
+                motion:framePosition="99"
+                motion:motionTarget="@id/pizzaSlicedPlate"/>
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/firstPlate"
+            motion:motionProgress="0"
+            android:translationX="-25dp"
+            android:translationY="-100dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/secondPlate"
+            motion:motionProgress="0"
+            android:background="@color/black_600"
+            android:translationX="-160dp"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginBottom="10dp"
+            motion:layout_constraintBottom_toTopOf="@id/limit"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/thirdPlate"
+            android:background="@color/gray_200"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/limit"/>
+        <Constraint
+            android:id="@+id/pizzaSlice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="-120dp"
+            android:translationY="56dp"
+            android:rotation="132"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/pizzaPlate"
+            android:translationX="180dp"
+            android:translationY="-30dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
+            android:id="@+id/pizzaSlicedPlate"
+            android:alpha="0"
+            android:translationX="180dp"
+            android:translationY="-30dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
+            android:id="@+id/emptyPlate"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@color/gray_200"
+            android:translationY="90dp"
+            android:translationX="800dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/limit" />
+        <Constraint
+            android:id="@+id/coffee"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:translationX="-400dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/limit"
+            android:background="@color/yellow_700" />
+        <Constraint
+            android:id="@+id/animatedDot"
+            android:layout_width="@dimen/eight_dips"
+            android:layout_height="@dimen/eight_dips"
+            android:background="@drawable/circular_shape_selected"
+            app:layout_constraintStart_toStartOf="@id/dotOne"
+            app:layout_constraintEnd_toEndOf="@id/dotOne"
+            app:layout_constraintTop_toTopOf="@id/dotOne" />
+        <Constraint
+            android:id="@+id/letsStartButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/red_300"
+            android:textColor="@android:color/white"
+            android:text="@string/lets_start"
+            android:translationY="200dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/sixteen_dips" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/firstPlate"
+            motion:motionProgress="1"
+            android:translationX="-600dp"
+            android:translationY="-80dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/secondPlate"
+            motion:motionProgress="1"
+            android:background="@color/black_600"
+            android:translationX="-900dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="280dp"
+            android:layout_height="310dp"
+            motion:layout_constraintBottom_toTopOf="@id/limit"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/thirdPlate"
+            android:background="@color/black_600"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="40dp"
+            android:translationX="-1200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/limit"/>
+        <Constraint
+            android:id="@+id/pizzaSlice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.95"
+            android:scaleY="0.95"
+            android:rotation="-92"
+            android:layout_marginTop="120dp"
+            motion:layout_constraintTop_toTopOf="@id/emptyPlate"
+            motion:layout_constraintStart_toStartOf="@id/emptyPlate"
+            motion:layout_constraintEnd_toEndOf="@id/emptyPlate"
+            motion:layout_constraintBottom_toBottomOf="@id/emptyPlate"
+            android:background="@color/red_700"/>
+        <Constraint
+            android:id="@+id/pizzaPlate"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:translationY="-420dp"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/pizzaSlicedPlate"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:translationY="-420dp"
+            android:scaleX="1.37"
+            android:scaleY="1.37"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/emptyPlate"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:background="@color/gray_200"
+            android:translationY="60dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/coffee"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:translationX="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/limit"
+            android:background="@color/yellow_700" />
+        <Constraint
+            android:id="@+id/animatedDot"
+            android:layout_width="@dimen/eight_dips"
+            android:layout_height="@dimen/eight_dips"
+            android:background="@drawable/circular_shape_selected"
+            app:layout_constraintStart_toStartOf="@id/dotThree"
+            app:layout_constraintEnd_toEndOf="@id/dotThree"
+            app:layout_constraintTop_toTopOf="@id/dotThree" />
+        <Constraint
+            android:id="@+id/letsStartButton"
+            android:background="@color/red_300"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/lets_start"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/sixteen_dips" />
+    </ConstraintSet>
+</MotionScene>
