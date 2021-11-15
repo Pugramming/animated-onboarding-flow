@@ -17,7 +17,7 @@ Any feedback and PR are welcome! (:<br><br>
 
 ## Design owner
 
-The design is based on this onboarding flow created by [Andrew Eugene](https://www.instagram.com/p/B7DzxyzAI_N/), please check it out!<br><br>
+The design is based on [this](https://www.instagram.com/p/B7DzxyzAI_N/) onboarding flow created by [Andrew Eugene](https://www.instagram.com/andrew.eugene/), please check it out!<br><br>
 
 
 ## Copyright
